@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Women in computing</title>
+    <style>
+      * {
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      h1 {
+        text-align: center;
+        border: 1px solid rgb(249, 186, 70);
+        padding: 20px 10px;
+        border-radius: 8px;
+        color: orange;
+        font-size: 2.2rem;
+        background-image: linear-gradient(white, rgb(235, 216, 181));
+      }
+      h2 {
+        text-align: center;
+        font-size: 1.3rem;
+        font-weight: bold;
+      }
+      img {
+        display: block;
+        margin: 20px auto;
+        max-width: 70%;
+        border-radius: 10px;
+        box-shadow: 3px 3px 3px gray;
+        transition: all 500ms linear;
+      }
+      img:hover {
+        box-shadow: 3px 3px 3px rgba(161, 105, 1, 0.708);
+        transition: all 500ms linear;
+      }
+      .hr {
+        height: 0.1rem;
+        background-color: orange;
+        border: none;
+        max-width: 95%;
+      }
+      span {
+        line-height: 2rem;
+        text-align: justify;
+        padding: 10px;
+        margin: 10px;
+        display: block;
+      }
+      p {
+        line-height: 1.8rem;
+        text-align: justify;
+        padding: 10px;
+        margin: 5px 10px;
+        display: block;
+      }
+      a {
+        text-decoration: none;
+        color: orangered;
+      }
+      button {
+        color: orangered;
+        padding: 10px 15px;
+        display: block;
+        margin: 0 auto;
+        border-radius: 10px;
+        border: 1px solid orange;
+        box-shadow: 3px 3px 3px gray;
+        cursor: pointer;
+      }
+      h3 {
+        text-align: center;
+        color: orangered;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1><em>Women in computing</em></h1>
+
+      <h2>The Secret History of Women in Coding</h2>
+      <hr class="hr" />
+
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/121/342/original/images.JPG?1711929440"
+        alt=""
+      />
+      <hr class="hr" />
+      <span>
+        The Association for Women in Computing
+        <a href="https://www.awc-hq.org/home.html" target="_blank"
+          ><strong>(AWC)</strong></a
+        >
+        was founded in Washington, D.C. in 1978 and is one of the first
+        professional organizations for women in computing. AWC is dedicated to
+        promoting the advancement of women in the computing professions. Our
+        members include many types of computer professionals, such as
+        programmers, system analysts, operators, technical writers, Internet
+        specialists, trainers and consultants.
+      </span>
+      <p>
+        The purpose of AWC is to provide opportunities for professional growth
+        through networking and through programs on technical and career-oriented
+        topics. AWC encourages high standards of competence and promotes a
+        professional attitude among its members. We are governed by a board of
+        directors representing all of the local chapters.
+      </p>
+      <br />
+      <h3></h3>
+    </div>
+    <button class="ButtonClick">Go to Home</button>
+    <script>
+      let ButtonClick = document.querySelector(".ButtonClick");
+      function Wellcome() {
+        let userName = prompt("whats your name?");
+        let userAge = prompt("How old are you?");
+        let Header = document.querySelector("h3");
+        alert(`${userName} wellcome`);
+        if (userAge >= 18) {
+          Header.innerHTML = `${userName} Go to Learn`;
+        } else {
+          Header.innerHTML = `${userName} Your age is Under 18 `;
+        }
+      }
+
+      ButtonClick.addEventListener("click", Wellcome);
+    </script>
+  </body>
+</html>
